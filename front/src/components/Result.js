@@ -1,22 +1,31 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { connect } from 'react-redux';
 
 const Result = (props) => {
-    console.log(props);
-    return (
-        <div>
-            {props.result && 'Integer numbers generated: ' + props.result} 
+    const orderedNumbers = props.result?.numbersList?.map((value, i = 1) => {
+        if((i+1) % props.result?.columns == 0) { //Si el index del array es múltiplo de la cantidad de columnas
+            return (
+                <Fragment key={i}>
+                    <div className='number'><span>{value}</span></div>
+                    <br/>
+                </Fragment>
+            );
+        }
+        return (<div className='number' key={i}><span>{value}</span></div>);
+    })
+    return <div className='result'>
+        <h3 className='form-subtitle'>Generated numbers</h3>
+        <div className='container-orderedNumbers'>
+            {orderedNumbers}
         </div>
-    )
+    </div>
 }
 
-const stateMapToPros = state => {
-
-
-
+const stateMapToProps = state => {
     return {
-        result: state.random.result?.numbersList
+        columns: state.random.result?.columns,
+        result: state.random.result
     }
 }
 
-export default connect(stateMapToPros)(Result)
+export default connect(stateMapToProps)(Result)

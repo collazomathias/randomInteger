@@ -1,10 +1,6 @@
-//reducers
 import { combineReducers } from 'redux'
 
-
-function view(state = {
-    loading: false
-}, action) {
+function view(state = { loading: false }, action) {
     switch (action.type) {
         //TODO: refactorizar
         case "view-loading": {
@@ -21,9 +17,7 @@ function view(state = {
     }
 }
 
-function random(state = {
-    result: {}
-}, action) {
+function random(state = { result: {} }, action) {
     switch (action.type) {
         case "random-result": {
             return { result: action.data }

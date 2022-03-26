@@ -8,27 +8,28 @@ const From = (props) => {// component stateless
         e.preventDefault();
         props.dispatch(fetchRandom(state));
     };
-    return <div>
-        <form onSubmit={onSubmit}>
-            <label htmlFor='amount'>Cantidad de números:</label>
-            <input name='amount' id='amount' onChange={(event) => setState({...state, [event.target.id]: event.target.value})}/>
-            <label htmlFor='initialNumber'>Menor número posible:</label>
-            <input name='initialNumber' id='initialNumber' onChange={(event) => setState({...state, [event.target.id]: event.target.value})}/>
-            <label htmlFor='finalNumber'>Mayor número posible:</label>
-            <input name='finalNumber' id='finalNumber' onChange={(event) => setState({...state, [event.target.id]: event.target.value})}/>
-            <label htmlFor='columns'>Cantidad de columnas a mostrar:</label>
-            <input name='columns' id='columns' onChange={(event) => setState({...state, [event.target.id]: event.target.value})}/>
-            <button type="submit" disabled={props.loading}>Enviar</button>
+    return <div className='form'>
+        <form className='form-contain' onSubmit={onSubmit}>
+            <h3 className='form-subtitle'>Enter the parameters</h3>
+            <label className='form-label' htmlFor='amount'>Quantity of numbers:</label>
+            <input className='form-input' name='amount' id='amount' onChange={(event) => setState({...state, [event.target.id]: event.target.value})}/>
+            <label className='form-label' htmlFor='initialNumber'>Lowest possible number:</label>
+            <input className='form-input' name='initialNumber' id='initialNumber' onChange={(event) => setState({...state, [event.target.id]: event.target.value})}/>
+            <label className='form-label' htmlFor='finalNumber'>Highest possible number:</label>
+            <input className='form-input' name='finalNumber' id='finalNumber' onChange={(event) => setState({...state, [event.target.id]: event.target.value})}/>
+            <label className='form-label' htmlFor='columns'>Number of columns to display:</label>
+            <input className='form-input' name='columns' id='columns' onChange={(event) => setState({...state, [event.target.id]: event.target.value})}/>
+            <button type="submit" disabled={props.loading}>Get numbers</button>
         </form>
     </div>
 }
 
 
-const stateMapToPros = state => {
+const stateMapToProps = state => {
     return {
         loading: state.view.loading
     }
 }
 
 
-export default connect(stateMapToPros)(From)
+export default connect(stateMapToProps)(From)

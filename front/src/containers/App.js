@@ -5,13 +5,17 @@ import Result from '../components/Result'
 class App extends Component {// component stateful
     render() {
         return (
-            <div>
-                <header>
-                    <h1 className='title'>RANDOM NUMBERS</h1>
-                </header>
-                <p className='subtitle'>RANDOM INTEGER NUMBER GENERATOR</p>
-                <From />
-                <Result />
+            <div className='container-all'>
+                <div className='container-title'>
+                    <h1>RANDOM NUMBERS</h1>
+                </div>
+                <div className='container-contain'>
+                    <p className='subtitle'>RANDOM INTEGER NUMBER GENERATOR</p>
+                    <div className='container-main'>
+                        <From />
+                        <Result />
+                    </div>
+                </div>
             </div>
         )
     }

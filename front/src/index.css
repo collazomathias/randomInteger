@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-all {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+    height: 80px;
+    font-family:"Courier New", arial, helvética;
+    font-weight: bold;
+    font-size: 36px;
+    background: rgb(58,158,180);
+    background: linear-gradient(72deg, rgba(58,158,180,1) 0%, rgba(253,29,29,1) 81%, rgba(252,176,69,1) 100%);
+}
+
+.container-contain {
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-contain .subtitle {
+    padding: 30px;
+    font-size: 32px;
+    font-family:"Courier New", arial, helvética;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: calc(100% - 120px);
+    padding: 20px;
+    padding-top: 0;
+}
+
+.form {
+    width: calc(30% - 40px);
+    padding: 20px;
+    margin-right: 10px;
+    border: 0.5px solid black;
+    border-radius: 6px;
+}
+
+.result {
+    width: calc(70% - 40px);
+    padding: 20px;
+    margin-left: 10px;
+    border: 0.5px solid black;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-subtitle {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family:"Courier New", arial, helvética;
+    border-bottom: 0.5px solid black;
+    margin-bottom: 30px;
+}
+
+.form-contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.form-contain button {
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-family:"Courier New", arial, helvética;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background-color: lightseagreen;
+    margin-top: 65px;
+}
+
+.form-contain button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+    border: 3px solid seagreen;
+    text-align: center;
+}
+
+.form-label {
+    width: 100%;
+    font-size: 18px;
+    font-family:"Courier New", arial, helvética;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 35px;
+    font-size: 18px;
+    font-family:"Courier New", arial, helvética;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 0.5px solid black;
+    padding-left: 10px;
+}
+
+.number {
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    margin: 5px;
+    text-align: center;
+    border: 0.5px solid black;
+    border-radius: 4px;
+}
+
+.number span {
+    line-height: 40px;
+}
+
+.container-orderedNumbers {
+    text-align: center;
+    height: calc(100% - 95px);
+    width: 100%;
+    overflow-y: scroll;
+}
+
