@@ -1,22 +1,12 @@
-# Mentoring dia 35
+# RANDOM INTEGER NUMBERS GENERATOR
 
-### TEMARIO: 
+### Problema a resolver
+Se busca una API capaz de devolver una cierta cantidad de números enteros entre dos limitantes, y debe mostrarse en una cierta cantidad de columnas, todo esto indicado por el usuario.
 
-Para Reactjs (/front)
-- React con Redux
-- Estructura de Redux y Diseño
+### API Rest
+| MÉTODO HTTP | POST            | GET         | PUT         | DELETE |
+| ----------- | --------------- | ----------- | ----------- | ------ |
+| /random     | Crea un array de números aleatorios con los parámetros indicados por el usuario | Lista el array generado en un formato de columnas especificado por el usuario | Error | Error |
 
-Para de Spring Boot (/back)
-- CRUD con mongodb
-- Reactividad con web flux
-- Hacer pruebas del controlador
-
-
-### PROBLEMA
-
-Crear una ventana en ReactJS que me permite renderizar una lista aleatoria que se le pase por una caja de texto dentro de un formulario, ingresar una lista separadas por coma y hacer submit de esa lista. El dato random se debe consultar a través de una API REST reactiva que esta diseñada con Spring Boot + Webflux. 
-
-
-
-
-
+### Video explicando funcionamiento
+[![Alt text](https://img.youtube.com/vi/gZyFrGcVGBY/0.jpg)](https://www.youtube.com/watch?v=gZyFrGcVGBY)
