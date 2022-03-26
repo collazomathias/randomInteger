@@ -17,6 +17,8 @@ public class RandomIntegerModel {
 
     private Integer columns;
 
+    private Integer amount;
+
     public Integer getFinalNumber() {
         return finalNumber;
     }
@@ -37,6 +39,10 @@ public class RandomIntegerModel {
         return columns;
     }
 
+    public Integer getAmount() {
+        return amount;
+    }
+
     public void setFinalNumber(Integer finalNumber) {
         this.finalNumber = finalNumber;
     }
@@ -55,6 +61,14 @@ public class RandomIntegerModel {
 
     public void setColumns(Integer columns) {
         this.columns = columns;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+
+    public Object save() {
+        return null;
     }
     
 }

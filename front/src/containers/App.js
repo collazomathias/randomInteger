@@ -3,16 +3,18 @@ import From from '../components/From'
 import Result from '../components/Result'
 
 class App extends Component {// component stateful
-  render() {
-    return (
-      <div>
-        <h3>Lista Random</h3>
-        <p>Sistema Ramdom - Demo</p>
-        <From />
-        <Result />
-      </div>
-    )
-  }
+    render() {
+        return (
+            <div>
+                <header>
+                    <h1 className='title'>RANDOM NUMBERS</h1>
+                </header>
+                <p className='subtitle'>RANDOM INTEGER NUMBER GENERATOR</p>
+                <From />
+                <Result />
+            </div>
+        )
+    }
 }
 
 export default App

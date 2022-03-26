@@ -25,25 +25,23 @@ public class RandomIntegerService {
         Integer initialNumber = randomInteger.getInitialNumber();
         Integer finalNumber = randomInteger.getFinalNumber();
         Integer columns = randomInteger.getColumns();
+        Integer amount = randomInteger.getAmount();
 
         return Mono.just(new RandomIntegerModel()).map(entity -> {
             entity.setInitialNumber(initialNumber);
             entity.setFinalNumber(finalNumber);
             entity.setColumns(columns);
+            entity.setAmount(amount);
             return entity;
         }).map(entity -> {
             IntStream stream = IntStream.generate(() -> {
-                return numerorandomEntreXY(initialNumber, finalNumber);
+                return (int)(Math.random() * (finalNumber - initialNumber + 1) + initialNumber);
             });
             int[] numbersList;
-            numbersList = stream.limit(finalNumber - initialNumber + 1).toArray();
+            numbersList = stream.limit(amount).toArray();
             entity.setNumbersList(numbersList);
             return entity;
         }).flatMap(randomIntegerRepository::save);
-    }
-    
-    public int numerorandomEntreXY(int x, int y) {
-        return (int) (Math.random() * (y - x + 1) + x);
     }
 
     public Flux<RandomIntegerModel> get() {
